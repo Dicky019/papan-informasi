@@ -2,6 +2,7 @@ export const schema = gql`
   type AdminExtract {
     id: Int!
     name: String!
+    nra: String!
     image_url: String!
   }
 
@@ -12,11 +13,13 @@ export const schema = gql`
 
   input CreateAdminExtractInput {
     name: String!
+    nra: String!
     image_url: String!
   }
 
   input UpdateAdminExtractInput {
     name: String
+    nra: String
     image_url: String
   }
 

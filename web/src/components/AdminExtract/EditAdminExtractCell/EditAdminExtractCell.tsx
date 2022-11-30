@@ -12,6 +12,7 @@ export const QUERY = gql`
     adminExtract: adminExtract(id: $id) {
       id
       name
+      nra
       image_url
     }
   }
@@ -21,6 +22,7 @@ const UPDATE_ADMIN_EXTRACT_MUTATION = gql`
     updateAdminExtract(id: $id, input: $input) {
       id
       name
+      nra
       image_url
     }
   }

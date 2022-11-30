@@ -1,3 +1,5 @@
+import { UserPlusIcon, HomeIcon } from '@heroicons/react/24/outline'
+
 import { Link, routes } from '@redwoodjs/router'
 import { Toaster } from '@redwoodjs/web/toast'
 
@@ -25,9 +27,16 @@ const ScaffoldLayout = ({
             {title}
           </Link>
         </h1>
-        <Link to={routes[buttonTo]()} className="rw-button rw-button-green">
-          <div className="rw-button-icon">+</div> {buttonLabel}
-        </Link>
+        <div className="flex gap-2">
+          <Link to={routes[buttonTo]()} className="rw-button rw-button-green">
+            {/* <div className="rw-button-icon">+</div> {buttonLabel} */}
+            <UserPlusIcon className="mr-2 h-6 w-6" />
+            {buttonLabel}
+          </Link>
+          <Link to={routes.home()} className="rw-button rw-button-blue">
+            <HomeIcon className="mr-2 h-6 w-6" /> Home
+          </Link>
+        </div>
       </header>
       <main className="rw-main">{children}</main>
     </div>

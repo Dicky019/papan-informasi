@@ -9,6 +9,7 @@ export const QUERY = gql`
     adminExtract: adminExtract(id: $id) {
       id
       name
+      nra
       image_url
     }
   }
@@ -22,6 +23,8 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div className="rw-cell-error">{error?.message}</div>
 )
 
-export const Success = ({ adminExtract }: CellSuccessProps<FindAdminExtractById>) => {
+export const Success = ({
+  adminExtract,
+}: CellSuccessProps<FindAdminExtractById>) => {
   return <AdminExtract adminExtract={adminExtract} />
 }

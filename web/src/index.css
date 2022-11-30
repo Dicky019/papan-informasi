@@ -11,9 +11,31 @@
 /**
  * END --- SETUP TAILWINDCSS EDIT
  */
-/* purgecss start ignore */
-/* @tailwind  base; */
-/* @tailwind  components; */
-/* purgecss end ignore */
 
-/* @tailwind  utilities; */
+@font-face {
+  font-family: rookwell-bold;
+  src: url(fonts/rockwell-font/Rockwell-ExtraBold.otf),
+    format('otf');
+}
+
+.text-kedai {
+  font-family: rookwell-bold;
+}
+
+.text-header {
+  @apply text-left text-center text-2xl font-medium;
+}
+
+.text-titel-pemateri {
+  @apply text-left text-xl font-semibold text-gray-800 dark:text-white;
+}
+.text-subtitel-pemateri {
+  @apply text-left text-lg font-medium text-gray-800 dark:text-zinc-200;
+}
+
+.text-titel-admin {
+  @apply text-left text-xl font-semibold text-white dark:text-gray-800;
+}
+.text-subtitel-admin {
+  @apply text-left text-lg font-medium text-zinc-200 dark:text-gray-800;
+}

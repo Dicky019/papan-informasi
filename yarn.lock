@@ -2880,6 +2880,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/react@npm:^2.0.13":
+  version: 2.0.13
+  resolution: "@heroicons/react@npm:2.0.13"
+  peerDependencies:
+    react: ">= 16"
+  checksum: d1272d98c02dc17830b4a6664cd99939e1931a621f42328210e79b045801bb603dc23a62a2650b413600ff9ce476058399643c0dd662eed3fa9e4aa1ad528c95
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.5":
   version: 0.10.7
   resolution: "@humanwhocodes/config-array@npm:0.10.7"
@@ -13726,6 +13735,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.11.3":
+  version: 3.11.3
+  resolution: "gsap@npm:3.11.3"
+  checksum: 8474ae7ecbac67b920c91cdf737c4bb2288c29b74d4f1366be2fce74453f7674539b81f5b33d5e3c7357f6c9aa2a357f753c61677da34cd8292d36d949e91e05
+  languageName: node
+  linkType: hard
+
 "gzip-size@npm:^6.0.0":
   version: 6.0.0
   resolution: "gzip-size@npm:6.0.0"
@@ -23876,11 +23892,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
+    "@heroicons/react": ^2.0.13
     "@redwoodjs/forms": 3.4.0
     "@redwoodjs/router": 3.4.0
     "@redwoodjs/web": 3.4.0
     autoprefixer: ^10.4.13
     filestack-react: ^4.0.1
+    gsap: ^3.11.3
     humanize-string: 2.1.0
     postcss: ^8.4.19
     postcss-loader: ^7.0.1

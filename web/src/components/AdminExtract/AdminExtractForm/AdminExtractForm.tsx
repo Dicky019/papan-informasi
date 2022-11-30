@@ -67,6 +67,24 @@ const AdminExtractForm = (props: AdminExtractFormProps) => {
         <FieldError name="name" className="rw-field-error" />
 
         <Label
+          name="nra"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          NRA
+        </Label>
+
+        <TextField
+          name="nra"
+          defaultValue={props.adminExtract?.nra}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="nra" className="rw-field-error" />
+
+        <Label
           name="image_url"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
@@ -86,9 +104,10 @@ const AdminExtractForm = (props: AdminExtractFormProps) => {
         {url && (
           <div>
             <img
+              className="my-8 block w-96 rounded-md object-cover"
               src={url}
               alt="avatar"
-              style={{ display: 'block', margin: '2rem 0', height: '300px' }}
+              // style={{ display: 'block', margin: '2rem 0', height: '300px' }}
             />
             <button
               onClick={() => setUrl(null)}

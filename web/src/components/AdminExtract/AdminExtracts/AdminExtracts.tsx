@@ -52,6 +52,7 @@ const AdminExtractsList = ({ adminExtracts }: FindAdminExtracts) => {
           <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>NRA</th>
             <th>Image url</th>
             <th>&nbsp;</th>
           </tr>
@@ -61,6 +62,7 @@ const AdminExtractsList = ({ adminExtracts }: FindAdminExtracts) => {
             <tr key={adminExtract.id}>
               <td>{truncate(adminExtract.id)}</td>
               <td>{truncate(adminExtract.name)}</td>
+              <td>{truncate(adminExtract.nra)}</td>
               <td>
                 {/* {truncate(adminExtract.image_url)} */}
                 <a

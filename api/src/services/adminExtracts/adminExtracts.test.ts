@@ -33,11 +33,16 @@ describe('adminExtracts', () => {
 
   scenario('creates a adminExtract', async () => {
     const result = await createAdminExtract({
-      input: { name: 'String', image_url: 'String1746109' },
+      input: {
+        name: 'String',
+        nra: 'String8304667',
+        image_url: 'String3748269',
+      },
     })
 
     expect(result.name).toEqual('String')
-    expect(result.image_url).toEqual('String1746109')
+    expect(result.nra).toEqual('String8304667')
+    expect(result.image_url).toEqual('String3748269')
   })
 
   scenario('updates a adminExtract', async (scenario: StandardScenario) => {

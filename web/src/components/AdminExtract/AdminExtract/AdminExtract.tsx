@@ -57,8 +57,26 @@ const AdminExtract = ({ adminExtract }: Props) => {
               <td>{adminExtract.name}</td>
             </tr>
             <tr>
+              <th>NRA</th>
+              <td>{adminExtract.nra}</td>
+            </tr>
+            <tr>
               <th>Image url</th>
-              <td>{adminExtract.image_url}</td>
+              <td>
+                {' '}
+                {/* {truncate(adminExtract.image_url)} */}
+                <a
+                  href={adminExtract.image_url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="w-96 rounded-md object-cover"
+                    src={adminExtract.image_url}
+                    alt="avatar"
+                  />
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>

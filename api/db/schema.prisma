@@ -1,5 +1,5 @@
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -14,5 +14,59 @@ generator client {
 model AdminExtract {
   id        Int    @id @default(autoincrement())
   name      String
+  nra       String @unique
   image_url String @unique
+}
+
+model PemateriExtract {
+  id          Int         @id @default(autoincrement())
+  name        String
+  nra         String      @unique
+  image_url   String      @unique
+  hari        Hari
+  konsentrasi Konsentrasi
+}
+
+model KeorganisasianExtract {
+  id            Int           @id @default(autoincrement())
+  name          String
+  nra           String        @unique
+  image_url     String        @unique
+  hari          Hari
+  jenisKegiatan JenisKegiatan
+}
+
+enum JenisKegiatan {
+  Pembelajaran
+  Nginap
+}
+
+enum Konsentrasi {
+  Program
+  Jaringan
+  Hardware
+  MultiMedia
+}
+
+enum Hari {
+  Senin
+  Selasa
+  Rabu
+  Kamis
+  Jumat
+  Sabtu
+}
+
+model ProgramKerjaExtract {
+  id           Int          @id @default(autoincrement())
+  nameProker   String
+  persenProker Float
+  programKerja ProgramKerja
+}
+
+enum ProgramKerja {
+  Keorganisasian
+  PublicAndRelation
+  ToolsAndProperties
+  Keilmuan
 }

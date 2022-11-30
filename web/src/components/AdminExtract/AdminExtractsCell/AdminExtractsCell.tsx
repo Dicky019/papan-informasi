@@ -10,6 +10,7 @@ export const QUERY = gql`
     adminExtracts {
       id
       name
+      nra
       image_url
     }
   }
