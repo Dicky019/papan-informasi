@@ -72,8 +72,22 @@ const KeorganisasianExtract = ({ keorganisasianExtract }: Props) => {
               <td>{keorganisasianExtract.nra}</td>
             </tr>
             <tr>
+              {/* <th>Image url</th>
+              <td>{keorganisasianExtract.image_url}</td> */}
               <th>Image url</th>
-              <td>{keorganisasianExtract.image_url}</td>
+              <td>
+                <a
+                  href={keorganisasianExtract.image_url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="w-96 rounded-md object-cover"
+                    src={keorganisasianExtract.image_url}
+                    alt="avatar"
+                  />
+                </a>
+              </td>
             </tr>
             <tr>
               <th>Hari</th>

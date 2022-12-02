@@ -70,3 +70,18 @@ enum ProgramKerja {
   ToolsAndProperties
   Keilmuan
 }
+
+model Infentaris {
+  id        Int    @id @default(autoincrement())
+  name      String
+  image_url String
+  value     Int
+}
+
+model SuratMasukTools {
+  id           Int    @id @default(autoincrement())
+  name         String
+  tanggalMasuk String
+  descripsi    String
+  image_url    String
+}

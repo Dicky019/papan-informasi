@@ -1,11 +1,13 @@
+import type {
+  DeletePemateriExtractMutationVariables,
+  FindPemateriExtractById,
+} from 'types/graphql'
 
 import { Link, routes, navigate } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
-import { formatEnum,  } from 'src/lib/formatters'
-
-import type { DeletePemateriExtractMutationVariables, FindPemateriExtractById } from 'types/graphql'
+import { formatEnum } from 'src/lib/formatters'
 
 const DELETE_PEMATERI_EXTRACT_MUTATION = gql`
   mutation DeletePemateriExtractMutation($id: Int!) {
@@ -20,18 +22,23 @@ interface Props {
 }
 
 const PemateriExtract = ({ pemateriExtract }: Props) => {
-  const [deletePemateriExtract] = useMutation(DELETE_PEMATERI_EXTRACT_MUTATION, {
-    onCompleted: () => {
-      toast.success('PemateriExtract deleted')
-      navigate(routes.pemateriExtracts())
-    },
-    onError: (error) => {
-      toast.error(error.message)
-    },
-  })
+  const [deletePemateriExtract] = useMutation(
+    DELETE_PEMATERI_EXTRACT_MUTATION,
+    {
+      onCompleted: () => {
+        toast.success('PemateriExtract deleted')
+        navigate(routes.pemateriExtracts())
+      },
+      onError: (error) => {
+        toast.error(error.message)
+      },
+    }
+  )
 
   const onDeleteClick = (id: DeletePemateriExtractMutationVariables['id']) => {
-    if (confirm('Are you sure you want to delete pemateriExtract ' + id + '?')) {
+    if (
+      confirm('Are you sure you want to delete pemateriExtract ' + id + '?')
+    ) {
       deletePemateriExtract({ variables: { id } })
     }
   }
@@ -49,19 +56,38 @@ const PemateriExtract = ({ pemateriExtract }: Props) => {
             <tr>
               <th>Id</th>
               <td>{pemateriExtract.id}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Name</th>
               <td>{pemateriExtract.name}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Nra</th>
               <td>{pemateriExtract.nra}</td>
-            </tr><tr>
+            </tr>
+            <tr>
+              {/* <th>Image url</th>
+              <td>{pemateriExtract.image_url}</td> */}
               <th>Image url</th>
-              <td>{pemateriExtract.image_url}</td>
-            </tr><tr>
+              <td>
+                <a
+                  href={pemateriExtract.image_url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="w-96 rounded-md object-cover"
+                    src={pemateriExtract.image_url}
+                    alt="avatar"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr>
               <th>Hari</th>
               <td>{formatEnum(pemateriExtract.hari)}</td>
-            </tr><tr>
+            </tr>
+            <tr>
               <th>Konsentrasi</th>
               <td>{formatEnum(pemateriExtract.konsentrasi)}</td>
             </tr>

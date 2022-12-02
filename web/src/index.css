@@ -27,15 +27,15 @@
 }
 
 .text-titel-pemateri {
-  @apply text-left text-xl font-semibold text-gray-800 dark:text-white;
+  @apply text-left text-xl font-semibold text-white;
 }
 .text-subtitel-pemateri {
-  @apply text-left text-lg font-medium text-gray-800 dark:text-zinc-200;
+  @apply text-left text-lg font-medium text-zinc-200;
 }
 
 .text-titel-admin {
-  @apply text-left text-xl font-semibold text-white dark:text-gray-800;
+  @apply text-left text-xl font-semibold text-gray-800;
 }
 .text-subtitel-admin {
-  @apply text-left text-lg font-medium text-zinc-200 dark:text-gray-800;
+  @apply text-left text-lg font-medium text-gray-800;
 }

@@ -14,11 +14,23 @@ import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 const Routes = () => {
   return (
     <Router>
-      <Set wrap={ScaffoldLayout} title="ProgramKerja Extracts" titleTo="programKerjaExtracts" buttonLabel="New Program KerjaExtract" buttonTo="newProgramKerjaExtract">
-        <Route path="/program-kerja-extracts/new" page={ProgramKerjaExtractNewProgramKerjaExtractPage} name="newProgramKerjaExtract" />
-        <Route path="/program-kerja-extracts/{id:Int}/edit" page={ProgramKerjaExtractEditProgramKerjaExtractPage} name="editProgramKerjaExtract" />
-        <Route path="/program-kerja-extracts/{id:Int}" page={ProgramKerjaExtractProgramKerjaExtractPage} name="programKerjaExtract" />
-        <Route path="/program-kerja-extracts" page={ProgramKerjaExtractProgramKerjaExtractsPage} name="programKerjaExtracts" />
+      <Set wrap={ScaffoldLayout} title="Surat Masuk Tools" titleTo="suratMasukToolses" buttonLabel="New Surat Masuk Tools" buttonTo="newSuratMasukTools">
+        <Route path="/surat-masuk-toolses/new" page={SuratMasukToolsNewSuratMasukToolsPage} name="newSuratMasukTools" />
+        <Route path="/surat-masuk-toolses/{id:Int}/edit" page={SuratMasukToolsEditSuratMasukToolsPage} name="editSuratMasukTools" />
+        <Route path="/surat-masuk-toolses/{id:Int}" page={SuratMasukToolsSuratMasukToolsPage} name="suratMasukTools" />
+        <Route path="/surat-masuk-toolses" page={SuratMasukToolsSuratMasukToolsesPage} name="suratMasukToolses" />
+      </Set>
+      <Set wrap={ScaffoldLayout} title="Infentarises" titleTo="infentarises" buttonLabel="New Infentaris" buttonTo="newInfentaris">
+        <Route path="/infentarises/new" page={InfentarisNewInfentarisPage} name="newInfentaris" />
+        <Route path="/infentarises/{id:Int}/edit" page={InfentarisEditInfentarisPage} name="editInfentaris" />
+        <Route path="/infentarises/{id:Int}" page={InfentarisInfentarisPage} name="infentaris" />
+        <Route path="/infentarises" page={InfentarisInfentarisesPage} name="infentarises" />
+      </Set>
+      <Set wrap={ScaffoldLayout} title="Program Kerja" titleTo="programKerjaExtracts" buttonLabel="New Program Kerja" buttonTo="newProgramKerjaExtract">
+        <Route path="/program-kerja/new" page={ProgramKerjaExtractNewProgramKerjaExtractPage} name="newProgramKerjaExtract" />
+        <Route path="/program-kerja/{id:Int}/edit" page={ProgramKerjaExtractEditProgramKerjaExtractPage} name="editProgramKerjaExtract" />
+        <Route path="/program-kerja/{id:Int}" page={ProgramKerjaExtractProgramKerjaExtractPage} name="programKerjaExtract" />
+        <Route path="/program-kerja" page={ProgramKerjaExtractProgramKerjaExtractsPage} name="programKerjaExtracts" />
       </Set>
       <Set wrap={ScaffoldLayout} title="Keorganisasian Extracts" titleTo="keorganisasianExtracts" buttonLabel="New Keorganisasian Extract" buttonTo="newKeorganisasianExtract">
         <Route path="/keorganisasian-extracts/new" page={KeorganisasianExtractNewKeorganisasianExtractPage} name="newKeorganisasianExtract" />

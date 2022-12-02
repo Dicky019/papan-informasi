@@ -1,4 +1,7 @@
-import type { EditPemateriExtractById, UpdatePemateriExtractInput } from 'types/graphql'
+import type {
+  EditPemateriExtractById,
+  UpdatePemateriExtractInput,
+} from 'types/graphql'
 
 import { navigate, routes } from '@redwoodjs/router'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
@@ -20,7 +23,10 @@ export const QUERY = gql`
   }
 `
 const UPDATE_PEMATERI_EXTRACT_MUTATION = gql`
-  mutation UpdatePemateriExtractMutation($id: Int!, $input: UpdatePemateriExtractInput!) {
+  mutation UpdatePemateriExtractMutation(
+    $id: Int!
+    $input: UpdatePemateriExtractInput!
+  ) {
     updatePemateriExtract(id: $id, input: $input) {
       id
       name
@@ -38,7 +44,9 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div className="rw-cell-error">{error?.message}</div>
 )
 
-export const Success = ({ pemateriExtract }: CellSuccessProps<EditPemateriExtractById>) => {
+export const Success = ({
+  pemateriExtract,
+}: CellSuccessProps<EditPemateriExtractById>) => {
   const [updatePemateriExtract, { loading, error }] = useMutation(
     UPDATE_PEMATERI_EXTRACT_MUTATION,
     {
@@ -62,10 +70,17 @@ export const Success = ({ pemateriExtract }: CellSuccessProps<EditPemateriExtrac
   return (
     <div className="rw-segment">
       <header className="rw-segment-header">
-        <h2 className="rw-heading rw-heading-secondary">Edit PemateriExtract {pemateriExtract?.id}</h2>
+        <h2 className="rw-heading rw-heading-secondary">
+          Edit PemateriExtract {pemateriExtract?.id}
+        </h2>
       </header>
       <div className="rw-segment-main">
-        <PemateriExtractForm pemateriExtract={pemateriExtract} onSave={onSave} error={error} loading={loading} />
+        <PemateriExtractForm
+          pemateriExtract={pemateriExtract}
+          onSave={onSave}
+          error={error}
+          loading={loading}
+        />
       </div>
     </div>
   )

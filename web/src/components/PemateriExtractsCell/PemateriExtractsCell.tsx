@@ -46,7 +46,7 @@ export const Success = ({
   return (
     <>
       <section className="bg-gray-900 py-14">
-        <h1 className="text-header text-gray-800 dark:text-white">
+        <h1 className="text-header text-white">
           Jadwal Keilmuan EXTRACT {process.env.REDWOOD_ENV_EXTRACT_KE}
         </h1>
         <div className="container mx-auto px-6 ">

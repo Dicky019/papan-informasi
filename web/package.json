@@ -13,10 +13,12 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^2.0.13",
     "@redwoodjs/forms": "3.4.0",
     "@redwoodjs/router": "3.4.0",
     "@redwoodjs/web": "3.4.0",
+    "date-fns": "^2.29.3",
     "filestack-react": "^4.0.1",
     "gsap": "^3.11.3",
     "humanize-string": "2.1.0",

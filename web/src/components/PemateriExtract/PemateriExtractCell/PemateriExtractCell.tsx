@@ -25,6 +25,8 @@ export const Failure = ({ error }: CellFailureProps) => (
   <div className="rw-cell-error">{error?.message}</div>
 )
 
-export const Success = ({ pemateriExtract }: CellSuccessProps<FindPemateriExtractById>) => {
+export const Success = ({
+  pemateriExtract,
+}: CellSuccessProps<FindPemateriExtractById>) => {
   return <PemateriExtract pemateriExtract={pemateriExtract} />
 }

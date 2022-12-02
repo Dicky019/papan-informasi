@@ -3,9 +3,15 @@
 import { MetaTags } from '@redwoodjs/web'
 
 import AdminExtracts from 'src/components/AdminExtractsCell'
+import Infentarises from 'src/components/InfentarisesCell'
+import JadwalAgenda from 'src/components/JadwalAgenda/JadwalAgenda'
+import JadwalMembersihkanSekret from 'src/components/JadwalMembersihkanSekret'
+import JadwalNginap from 'src/components/JadwalNginap/JadwalNginap'
+import Kalender from 'src/components/Kalender'
 import KeorganisasianExtract from 'src/components/KeorganisasianExtractsCell'
 import PemateriExtracts from 'src/components/PemateriExtractsCell'
 import ProgramKerjaExtracts from 'src/components/programKerjaExtractsCell'
+import SuratMasukToolses from 'src/components/SuratMasukToolsesCell'
 
 const HomePage = () => {
   return (
@@ -23,7 +29,21 @@ const HomePage = () => {
       {/* <PemateriExtracts /> */}
       <hr className="rounded-md bg-transparent py-[1.5px]" />
       <KeorganisasianExtract />
-      <ProgramKerjaExtracts />
+      <div className="flex flex-col lg:flex-row">
+        <div className="flex-1">
+          <ProgramKerjaExtracts />
+        </div>
+        <div className="flex-1">
+          <Infentarises />
+        </div>
+      </div>
+      <SuratMasukToolses />
+      <JadwalMembersihkanSekret />
+      <JadwalAgenda />
+      <JadwalNginap />
+
+      <Kalender />
+      <div className="h-16"></div>
     </>
   )
 }
