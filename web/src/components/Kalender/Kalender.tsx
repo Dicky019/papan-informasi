@@ -183,11 +183,11 @@ function Meeting({ meeting }) {
 
   return (
     <li className="group flex items-center space-x-4 rounded-xl px-4 py-2 focus-within:bg-gray-100 hover:bg-gray-100">
-      <img
+      {/* <img
         src={meeting.imageUrl}
         alt=""
         className="h-10 w-10 flex-none rounded-full"
-      />
+      /> */}
       <div className="flex-auto">
         <p className="text-gray-900">{meeting.name}</p>
         <p className="mt-0.5">
